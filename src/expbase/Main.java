@@ -22,10 +22,13 @@ public class Main {
 
         Human marcin = new Human ("Marcin");
         marcin.setCar(seicento);
-        System.out.println(marcin.getCar());
+        System.out.println("Marcina samochód to : " + marcin.getCar().model);
 
         marcin.setCar(new Car("Ford","Mustang"));
         marcin.getCar();
-        System.out.println(marcin.getCar()); //do poprawy drukowanie wyniku
+        System.out.println("Marcina samochód to : " + marcin.getCar().model);
+
+        marcin.setSalary(250.0);
+        System.out.println("Wynagrodzenie Marcina wynosi: " + marcin.getSalary() + "BTC/msc");
     }
 }
