@@ -16,19 +16,14 @@ public class Main {
         dog.takeForWalk();
         System.out.println(dog.getWeight()); */
 
+        Human marcin = new Human ("Marcin");
+        marcin.setSalary(2500.0);
+        System.out.println("Wynagrodzenie Marcina wynosi: " + marcin.getSalary() + "PLN");
+
         Car seicento = new Car("Fiat", "Seicento");
         seicento.milleage = 30000;
         seicento.horsePower = 55;
-
-        Human marcin = new Human ("Marcin");
+        seicento.value = 3000;
         marcin.setCar(seicento);
-        System.out.println("Marcina samochód to : " + marcin.getCar().model);
-
-        marcin.setCar(new Car("Ford","Mustang"));
-        marcin.getCar();
-        System.out.println("Marcina samochód to : " + marcin.getCar().model);
-
-        marcin.setSalary(250.0);
-        System.out.println("Wynagrodzenie Marcina wynosi: " + marcin.getSalary() + "BTC/msc");
     }
 }

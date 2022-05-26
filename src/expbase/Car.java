@@ -6,6 +6,7 @@ public class Car {
     public double horsePower;
     public int milleage;
     String color;
+    public int value;
 
     public Car(String producent, String model) {
         this.producent = producent;

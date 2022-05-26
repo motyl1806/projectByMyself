@@ -5,7 +5,7 @@ public class Human {
     final public String name;
     public int age;
     private Car car;
-    private Double Salary;
+    private Double salary;
 
     public Human(String name) {
         this.name = name;
@@ -16,12 +16,20 @@ public class Human {
     }
 
     public void setCar(Car car) {
-        this.car = car;
+        if (this.salary > car.value){
+            System.out.println("Kupiłeś samochód za gotówkę! :" + car.model);
+            this.car = car;
+        } else if (this.salary > car.value / 12.0){
+            System.out.println("Kupiłeś samochód na kredyt :" + car.model);
+            this.car = car;
+        } else {
+            System.out.println("Nie stać Cię na ten samochód");
+        }
     }
 
     public Double getSalary() {
         System.out.println("Dane o wypłacie były pobrane " + java.time.LocalDateTime.now());
-        return this.Salary;
+        return this.salary;
     }
 
     public double setSalary(double Salary) {
@@ -31,8 +39,8 @@ public class Human {
             System.out.println("Dane zostały wysłane do systemu księgowego.");
             System.out.println("Proszę odebrać aneks u Pani Hani.");
             System.out.println("Twoje dane trafiły do ZUS i US.");
-            this.Salary = Salary;
-            return this.Salary;
+            this.salary = Salary;
+            return this.salary;
         }
         return Salary;
     }
