@@ -12,6 +12,16 @@ public class Animal {
     public String name;
     public Boolean isAlive;
 
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "species='" + species + '\'' +
+                ", weight=" + weight +
+                ", name='" + name + '\'' +
+                ", isAlive=" + isAlive +
+                '}';
+    }
+
     public Animal(String species) {
         this.species = species;
         this.weight = weight;

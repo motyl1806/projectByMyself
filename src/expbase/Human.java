@@ -7,6 +7,17 @@ public class Human {
     private Car car;
     private Double salary;
 
+    @Override
+    public String toString() {
+        return "Human{" +
+                "pet=" + pet +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", car=" + car +
+                ", salary=" + salary +
+                '}';
+    }
+
     public Human(String name) {
         this.name = name;
     }
