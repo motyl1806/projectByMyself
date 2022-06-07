@@ -1,4 +1,4 @@
-package expbase;
+package expbase.devices;
 
 import java.util.Objects;
 

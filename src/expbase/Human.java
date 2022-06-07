@@ -1,5 +1,7 @@
 package expbase;
 
+import expbase.devices.Car;
+
 public class Human {
     public Animal pet;
     final public String name;
