@@ -1,5 +1,7 @@
 package expbase.devices;
 
+import expbase.Human;
+
 import java.util.Objects;
 
 public class Car {
@@ -49,6 +51,19 @@ public class Car {
     public void turnOn() {
         System.out.println("dydydydy");
         System.out.println("dydydydy");
+    }
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
+    if (seller.getCar() != this) {
+        throw new Exception("Sprzedawca nie posiada tego samochodu");
+    }
+    if (buyer.cash < price) {
+        System.out.println("Kupujący nie ma tyle pieniędzy");
+    }
+    buyer.cash -= price;
+    seller.cash += price;
+    buyer.car = this;
+    seller.car = null;
+        System.out.println("Sprzedano samochód");
     }
 
 }

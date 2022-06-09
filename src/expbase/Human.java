@@ -7,12 +7,12 @@ public class Human extends Animal {
     public Animal pet;
     public String name;
     public int age;
-    private Car car;
+    public Car car;
     private Double salary;
     public Double cash;
     public Phone mobile;
 
-    public Human(String marcin) {
+    public Human(String name) {
         super("homo sapiens");
         this.cash = 10000.0;
     }
