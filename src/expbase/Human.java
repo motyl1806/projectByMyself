@@ -1,13 +1,21 @@
 package expbase;
 
 import expbase.devices.Car;
+import expbase.devices.Phone;
 
-public class Human {
+public class Human extends Animal {
     public Animal pet;
-    final public String name;
+    public String name;
     public int age;
     private Car car;
     private Double salary;
+    public Double cash;
+    public Phone mobile;
+
+    public Human(String marcin) {
+        super("homo sapiens");
+        this.cash = 10000.0;
+    }
 
     @Override
     public String toString() {
@@ -20,12 +28,14 @@ public class Human {
                 '}';
     }
 
-    public Human(String name) {
-        this.name = name;
-    }
-
     public Car getCar() {
         return this.car;
+    }
+    public Phone getMobile() {
+        return this.mobile;
+    }
+    public void setMobile(Phone mobile){
+    this.mobile = mobile;
     }
 
     public void setCar(Car car) {

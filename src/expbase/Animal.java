@@ -39,6 +39,8 @@ public class Animal {
         }
     }
 
+ 
+
     public Double getWeight() {
         return this.weight;
     }
